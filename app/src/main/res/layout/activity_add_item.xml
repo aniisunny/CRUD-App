@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddItem">
+
+    <EditText
+        android:id="@+id/newName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="8dp"
+        android:background="@drawable/background"
+        android:hint="Name"
+        android:inputType="text"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/newDepartment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="8dp"
+        android:background="@drawable/background"
+        android:hint="Department"
+        android:inputType="text"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/newCollege"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="8dp"
+        android:background="@drawable/background"
+        android:hint="College"
+        android:inputType="text"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/addItem"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Add Item"
+        android:textColor="@android:color/white"
+        android:background="@drawable/buttonbackground"
+        android:paddingTop="20dp"
+        android:paddingBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+</LinearLayout>
