@@ -33,4 +33,8 @@ public class StudentAdapter extends ArrayAdapter<Student> {
 
         return convertView;
     }
+
+    public void remove(int position){
+        MainActivity.arrayOfStudents.remove(MainActivity.arrayOfStudents.get(position));
+    }
 }

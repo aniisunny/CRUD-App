@@ -22,12 +22,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        arrayOfStudents.add(new Student("Aniruddha", "CSE", "Chandigarh University"));
-        arrayOfStudents.add(new Student("Divya Ahuja", "CSE", "Banasthali Vidyapith"));
-        arrayOfStudents.add(new Student("Rahul Bansal", "CSE", "Chandigarh University"));
-        arrayOfStudents.add(new Student("Riddhi Sharma", "ECE", "AKEG"));
-        arrayOfStudents.add(new Student("Simran Kaur", "CSE", "Chandigarh University"));
-        arrayOfStudents.add(new Student("Charu Garg", "CSE", "Banasthali Vidyapith"));
+//        arrayOfStudents.add(new Student("Aniruddha", "CSE", "Chandigarh University"));
+//        arrayOfStudents.add(new Student("Divya Ahuja", "CSE", "Banasthali Vidyapith"));
+//        arrayOfStudents.add(new Student("Rahul Bansal", "CSE", "Chandigarh University"));
+//        arrayOfStudents.add(new Student("Riddhi Sharma", "ECE", "AKEG"));
+//        arrayOfStudents.add(new Student("Simran Kaur", "CSE", "Chandigarh University"));
+//        arrayOfStudents.add(new Student("Charu Garg", "CSE", "Banasthali Vidyapith"));
 
         final StudentAdapter adapter = new StudentAdapter (this, arrayOfStudents);
 
@@ -47,7 +47,9 @@ public class MainActivity extends AppCompatActivity {
 //        removeButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                //adapter.remove(0);
+//                int position = v.getId();
+//                //arrayOfStudents.remove(arrayOfStudents.get(position));
+//                adapter.remove(position);
 //                adapter.notifyDataSetChanged();
 //            }
 //        });
@@ -63,6 +65,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 adapter.notifyDataSetChanged();
+            }
+        });
+
+        Button searchButton = (Button) findViewById(R.id.searchItem);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (MainActivity.this, SearchItem.class);
+                startActivity(intent);
             }
         });
     }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class AddItem extends AppCompatActivity {
 
@@ -28,6 +29,7 @@ public class AddItem extends AppCompatActivity {
                 String collegeString = collegeEditText.getText().toString();
 
                 MainActivity.arrayOfStudents.add (new Student(nameString, departmentString, collegeString));
+                Toast.makeText(AddItem.this, "Add Item Successfully!", Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent (AddItem.this, MainActivity.class);
                 startActivity(intent);
